@@ -205,9 +205,9 @@ User * signup(DB* db)
 		cout << "Please type in your desired username." << endl;
 		cin >> username;
 		isTaken = checkUsername(db, username);
-		if (username.find('\\') != std::string::npos)
+		if (username.find('//') != std::string::npos)
 		{
-			cout << "Your username contains an invalid character! (\\)" << endl;
+			cout << "Your username contains an invalid character! (//)" << endl;
 			isTaken = true;
 		}
 	} while (isTaken);
